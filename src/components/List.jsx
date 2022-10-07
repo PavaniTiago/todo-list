@@ -5,14 +5,14 @@ import { TextField } from '@mui/material';
 
 
 
-export default function List({ item }){
+export default function List({ removeItem, todo}){
 
   return(
-    <div>
-      <TextField id="outlined-read-only-input" value={item} InputProps={{readOnly: true}} sx={{ width: '85%',  mb: '3rem'}} />
-      <Fab color='primary' sx={{mx: '10px'}}>
+    <>
+      <TextField id="outlined-read-only-input" value={todo.text} InputProps={{readOnly: true}} sx={{ width: '85%',  mb: '2rem'}} />
+      <Fab color='primary' sx={{mx: '10px'}}  onClick={() => removeItem(todo.id)}>
         <CheckIcon />
-        </Fab>
-    </div>
+      </Fab>
+    </>
   )
 }
