@@ -18,6 +18,7 @@ export default function Form() {
   const removeItem = (id) => {
     let tmpArray = todos.filter((todo) => todo.id !== id);
     setTodo(tmpArray)
+    console.log(tmpArray)
   }
 
   return (
