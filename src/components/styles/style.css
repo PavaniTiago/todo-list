@@ -4,5 +4,27 @@ h1{
     align-items: center;
     justify-content: center;
     margin-top: 100px;
-  }
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lists{
+    height: 15rem;
+    overflow-y: scroll;
+    background: rgb(43, 43, 43);
+    border-radius: 0.8em;
+    padding: 6px;
+}
+
+.lists::-webkit-scrollbar {
+  width: 1em;
+}
+
+
+
+
 

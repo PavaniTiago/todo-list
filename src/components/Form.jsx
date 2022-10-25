@@ -9,6 +9,7 @@ import Search from './Search';
 
 export default function Form() {
   
+
   const [todos, setTodo] = useState([])
   
   const addItem = (todo) =>{
@@ -26,11 +27,14 @@ export default function Form() {
       <Container maxWidth='sm'>
         <h1>Todo-List</h1>
         <Search addItem={addItem}/>
-        {todos.map((todo, index) => (
-         <div key={todo.id}>
-            <List todo={todo} key={index} removeItem={removeItem}/>
-          </div>
-        ))}
+        <h2>Your lists:</h2>
+        <div className='lists'>
+          {todos.map((todo, index) => (
+          <div key={todo.id}>
+              <List todo={todo} key={index} removeItem={removeItem}/>
+            </div>
+          ))}
+        </div>
       </Container>    
     </div>
   )

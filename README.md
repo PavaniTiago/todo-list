@@ -8,4 +8,3 @@
     <li>JavaScript</li>
 </ul>
 
-## Deploy: 
