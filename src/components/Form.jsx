@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import List from './List';
 import { useState } from 'react';
 import Search from './Search';
+import FinishedList from './FinishedList';
 
 
 
@@ -16,11 +17,21 @@ export default function Form() {
     setTodo([...todos, todo])
   }
 
+  const finishItem = (todo) =>{
+    todos.map((todo, index) =>(
+      <div key={todo.id}>
+        <FinishedList todo={todo} key={index} removeItem={removeItem}/>
+      </div>
+    ))
+  }
+
   const removeItem = (id) => {
     let tmpArray = todos.filter((todo) => todo.id !== id);
     setTodo(tmpArray)
     console.log(tmpArray)
   }
+
+  
 
   return (
     <div className='content'> 

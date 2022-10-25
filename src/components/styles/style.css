@@ -17,7 +17,8 @@ h2{
     overflow-y: scroll;
     background: rgb(43, 43, 43);
     border-radius: 0.8em;
-    padding: 6px;
+    padding: 15px 2px 5px 16px;
+    width: 34rem;
 }
 
 .lists::-webkit-scrollbar {
